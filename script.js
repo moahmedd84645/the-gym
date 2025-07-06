@@ -25,29 +25,29 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         const allExercises = [
-            { muscle: 'chest', name: 'بنش برس بالبار (مستوي)', level: ['beginner', 'intermediate'], rest: '60-90s', videoUrl: 'https://www.youtube.com/watch?v=rT7DgLdSAng' },
-            { muscle: 'chest', name: 'بنش برس بالدمبل (عالي)', level: ['beginner', 'intermediate'], rest: '60s', videoUrl: 'https://www.youtube.com/watch?v=8iPEnn-ltC8' },
-            { muscle: 'chest', name: 'تفتيح بالكابل', level: ['intermediate'], rest: '45-60s', videoUrl: 'https://www.youtube.com/watch?v=c_Zg9dKFNr4' },
+            { muscle: 'chest', name: 'بنش برس بالبار (مستوي)', level: ['beginner', 'intermediate'], rest: '60-90s', videoUrl: 'https://youtu.be/rGAd-6kaepo?si=IGLmyqTXtzcicSLv' },
+            { muscle: 'chest', name: 'بنش برس بالدمبل (عالي)', level: ['beginner', 'intermediate'], rest: '60s', videoUrl: 'https://youtube.com/shorts/JusqyygTvd8?si=HDMcYswslI8dJ_A1' },
+            { muscle: 'chest', name: 'تفتيح بالكابل', level: ['intermediate'], rest: '45-60s', videoUrl: 'https://youtube.com/shorts/AJhU25QU7A0?si=cDpmoOASzJAEBkJf' },
             { muscle: 'chest', name: 'غاطس (Dips)', level: ['intermediate'], rest: '60s', videoUrl: 'https://www.youtube.com/watch?v=2z8JmcrW-As' },
             { muscle: 'back', name: 'سحب أمامي واسع', level: ['beginner', 'intermediate'], rest: '60s', videoUrl: 'https://www.youtube.com/watch?v=lueEJGjTuPQ' },
             { muscle: 'back', name: 'تجديف بالبار', level: ['intermediate'], rest: '60-90s', videoUrl: 'https://www.youtube.com/watch?v=vT2GjY_Umpw' },
             { muscle: 'back', name: 'عقلة (Pull-ups)', level: ['intermediate'], rest: '90s', videoUrl: 'https://www.youtube.com/watch?v=eGo4IYlbE5g' },
             { muscle: 'back', name: 'منشار بالدمبل', level: ['beginner', 'intermediate'], rest: '60s', videoUrl: 'https://www.youtube.com/watch?v=pYcpY20QaE8' },
             { muscle: 'legs', name: 'سكوات خلفي بالبار', level: ['beginner', 'intermediate'], rest: '90-120s', videoUrl: 'https://www.youtube.com/watch?v=bEv6CCg2BC8' },
-            { muscle: 'legs', name: 'دفع بالأرجل', level: ['beginner', 'intermediate'], rest: '60-90s', videoUrl: 'https://www.youtube.com/watch?v=IZ_9sC6l2bQ' },
+            { muscle: 'legs', name: 'دفع بالأرجل', level: ['beginner', 'intermediate'], rest: '60-90s', videoUrl: 'https://youtu.be/g5p7wcDXyTg?si=iELyWYW2K2kYflkD' },
             { muscle: 'legs', name: 'اندفاع (Lunges)', level: ['beginner', 'intermediate'], rest: '60s', videoUrl: 'https://www.youtube.com/watch?v=QOVaHwm-Q6U' },
             { muscle: 'legs', name: 'مرجحة رجل خلفي', level: ['beginner', 'intermediate'], rest: '60s', videoUrl: 'https://www.youtube.com/watch?v=1Tq3QdYUuHs' },
             { muscle: 'shoulders', name: 'دفع كتف عسكري', level: ['intermediate'], rest: '60-90s', videoUrl: 'https://www.youtube.com/watch?v=2yjwXTZQDDI' },
             { muscle: 'shoulders', name: 'رفرفة جانبي', level: ['beginner', 'intermediate'], rest: '45-60s', videoUrl: 'https://www.youtube.com/watch?v=3VcKaXpzqRo' },
-            { muscle: 'shoulders', name: 'Face Pulls', level: ['intermediate'], rest: '45-60s', videoUrl: 'https://www.youtube.com/watch?v=eIq5CB9wyo4' },
+            { muscle: 'shoulders', name: 'Face Pulls', level: ['intermediate'], rest: '45-60s', videoUrl: 'https://youtu.be/0Po47vvj9g4?si=Iz17txvEuhvmjC4m' },
             { muscle: 'biceps', name: 'تبادل بالدمبل', level: ['beginner', 'intermediate'], rest: '60s', videoUrl: 'https://www.youtube.com/watch?v=sAq_ocpRh_I' },
             { muscle: 'biceps', name: 'همر كيرل', level: ['beginner', 'intermediate'], rest: '60s', videoUrl: 'https://www.youtube.com/watch?v=zC3nLlEvin4' },
             { muscle: 'triceps', name: 'ترايسبس بوش داون', level: ['beginner', 'intermediate'], rest: '60s', videoUrl: 'https://www.youtube.com/watch?v=2-LAMcpzODU' },
             { muscle: 'triceps', name: 'Skull Crushers', level: ['intermediate'], rest: '60-90s', videoUrl: 'https://www.youtube.com/watch?v=d_KZxkY_0cM' },
             { muscle: 'abs', name: 'بلانك', level: ['beginner', 'intermediate'], sets: '4x60s', rest: '45s', videoUrl: 'https://www.youtube.com/watch?v=ASdvN_XEl_c' },
-            { muscle: 'abs', name: 'رفع الأرجل', level: ['beginner', 'intermediate'], sets: '4x15', rest: '45s', videoUrl: 'https://www.youtube.com/watch?v=l4kQd9eWJmk' },
-            { muscle: 'cardio', name: 'جري متوسط الشدة', level: ['beginner', 'intermediate'], sets: '30 min', rest: 'N/A', videoUrl: 'https://www.youtube.com/watch?v=8L-fDP21I5E' },
-            { muscle: 'cardio', name: 'نط الحبل', level: ['beginner', 'intermediate'], sets: '15 min', rest: 'Intervals', videoUrl: 'https://www.youtube.com/watch?v=u3pgRk_HJp4' }
+            { muscle: 'abs', name: 'رفع الأرجل', level: ['beginner', 'intermediate'], sets: '4x15', rest: '45s', videoUrl: 'https://youtu.be/NqjLmoje9NQ?si=u7w-Ius3Gb58gcZr' },
+            { muscle: 'cardio', name: 'جري متوسط الشدة', level: ['beginner', 'intermediate'], sets: '30 min', rest: 'N/A', videoUrl: 'https://youtube.com/shorts/RXM0WUSWn4M?si=y1iKewYX5uTmT3RQ' },
+            { muscle: 'cardio', name: 'نط الحبل', level: ['beginner', 'intermediate'], sets: '15 min', rest: 'Intervals', videoUrl: 'https://youtube.com/shorts/RFll-zM9FH8?si=1ONzTLDSqzOHVxIr' }
         ];
 
         function generateExerciseProgram(duration, level, goal) {
