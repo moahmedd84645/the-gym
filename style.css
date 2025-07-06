@@ -1,0 +1,192 @@
+/* --- Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap');
+
+/* --- General Styles --- */
+:root {
+    --primary-blue: #004a7c;
+    --secondary-blue: #005691;
+    --light-blue-bg: #e9f5ff;
+    --accent-blue: #007bff;
+    --youtube-red: #FF0000;
+    --light-grey-bg: #f4f7f6;
+    --white-color: #ffffff;
+    --dark-text: #333;
+    --nav-height: 70px;
+}
+
+body {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 17px;
+    margin: 0;
+    direction: rtl;
+    background-color: var(--light-grey-bg);
+    color: var(--dark-text);
+}
+
+/* --- Top Navigation Bar Styles --- */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-blue);
+    color: var(--white-color);
+    padding: 0 30px;
+    height: var(--nav-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.top-nav .logo { display: flex; align-items: center; gap: 10px; }
+.top-nav .logo h2 { margin: 0; font-size: 1.2em; }
+.top-nav .menu a { color: var(--white-color); text-decoration: none; padding: 10px 15px; margin: 0 5px; border-radius: 8px; transition: background-color 0.3s; display: inline-flex; align-items: center; gap: 8px; }
+.top-nav .menu a:hover, .top-nav .menu a.active { background-color: var(--secondary-blue); }
+.menu-toggle { display: none; background: none; border: none; color: var(--white-color); font-size: 1.8em; cursor: pointer; }
+
+/* --- Main Content Styles --- */
+.content {
+    padding: 30px;
+    margin-top: var(--nav-height);
+    width: 100%;
+    box-sizing: border-box;
+    animation: page-load-animation 0.5s ease-out forwards;
+}
+header { border-bottom: 2px solid #e0e0e0; padding-bottom: 15px; margin-bottom: 30px; }
+header h1 { color: var(--primary-blue); margin: 0; }
+
+/* --- General Card & Component Styles --- */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.card { background-color: var(--white-color); border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: center; }
+.card h3 { color: var(--secondary-blue); margin-top: 0; font-weight: 700; }
+.card ul { list-style-type: none; padding: 0; text-align: right; margin-bottom: 15px; }
+.card ul li { padding: 5px 0; border-bottom: 1px solid #f0f0f0; }
+.card ul li:last-child { border-bottom: none; }
+.card-icon { font-size: 3em; color: var(--primary-blue); margin-bottom: 15px; }
+.card a { display: inline-block; margin-top: 15px; padding: 8px 15px; background-color: var(--accent-blue); color: white; text-decoration: none; border-radius: 5px; }
+
+/* --- Form Styles (Used by multiple pages) --- */
+.calculator-container { max-width: 600px; margin: 0 auto 30px auto; background-color: var(--white-color); padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; color: var(--dark-text); font-weight: 700; }
+.form-group input, .form-group select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 1rem; }
+#program-form button, #diet-form button { width: 100%; padding: 12px; background-color: var(--accent-blue); color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; transition: background-color 0.3s; font-family: 'IBM Plex Sans Arabic', sans-serif; font-weight: 700; }
+#program-form button:hover, #diet-form button:hover { background-color: #0056b3; }
+.plan-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px; }
+#change-program-btn, #change-diet-btn { background-color: var(--accent-blue); color: white; border: none; padding: 10px 18px; border-radius: 5px; cursor: pointer; font-size: 16px; font-family: 'IBM Plex Sans Arabic', sans-serif; font-weight: 700; transition: background-color 0.3s; }
+#change-program-btn:hover, #change-diet-btn:hover { background-color: #0056b3; }
+.preference-group { border: 1px solid #ccc; border-radius: 8px; padding: 15px; margin-top: 25px; }
+.preference-group legend { padding: 0 10px; font-weight: 700; color: var(--dark-text); }
+.checkbox-wrapper { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
+.checkbox-wrapper label { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+
+/* --- Diet System Selection Card Styles --- */
+.diet-system-selection { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 10px; }
+.diet-card { border: 2px solid #e0e0e0; border-radius: 8px; padding: 15px; text-align: center; cursor: pointer; transition: all 0.3s ease; position: relative; }
+.diet-card:hover { border-color: var(--secondary-blue); transform: translateY(-5px); }
+.diet-card i { font-size: 2em; color: var(--primary-blue); margin-bottom: 10px; }
+.diet-card h4 { margin: 0 0 5px 0; color: var(--dark-text); }
+.diet-card p { font-size: 0.85em; color: #666; margin: 0; }
+.diet-card input[type="radio"] { display: none; }
+input[type="radio"]:checked + .diet-card { border-color: var(--accent-blue); box-shadow: 0 0 15px rgba(0, 123, 255, 0.3); background-color: #f8f9fa; }
+
+/* --- Exercise Program Styles --- */
+.week-navigation { display: flex; justify-content: space-between; align-items: center; padding: 10px; background-color: var(--white-color); border-radius: 8px; margin-bottom: 20px; border: 1px solid #e0e0e0; }
+.week-navigation button { background-color: var(--secondary-blue); color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; display: flex; align-items: center; gap: 8px; font-family: 'IBM Plex Sans Arabic', sans-serif; font-weight: 700; transition: background-color 0.3s; }
+.week-navigation button:hover { background-color: var(--primary-blue); }
+.week-navigation button:disabled { background-color: #ccc; cursor: not-allowed; }
+#week-indicator { font-size: 1.2em; font-weight: 700; color: var(--primary-blue); }
+.day-title { color: var(--primary-blue); border-bottom: 2px solid var(--accent-blue); padding-bottom: 10px; margin-top: 40px; margin-bottom: 20px; }
+.exercise-plan { display: block; }
+.exercise-card { background-color: var(--white-color); border: 1px solid #e0e0e0; border-right: 5px solid var(--primary-blue); border-radius: 8px; padding: 15px 20px; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+.card-content-wrapper { flex-grow: 1; }
+.exercise-header { display: flex; align-items: center; gap: 15px; }
+.exercise-header i { font-size: 1.5em; color: var(--secondary-blue); }
+.exercise-header h3 { margin: 0; color: var(--dark-text); }
+.exercise-details { display: flex; gap: 25px; margin-top: 10px; }
+.exercise-details p { margin: 0; color: var(--dark-text); }
+.exercise-details i { color: var(--accent-blue); }
+.video-link { background-color: var(--youtube-red); color: white; padding: 8px 12px; border-radius: 5px; text-decoration: none; font-weight: 700; font-size: 0.9em; display: inline-flex; align-items: center; gap: 8px; transition: background-color 0.3s; flex-shrink: 0; }
+.video-link:hover { background-color: #c40000; }
+
+/* --- Accordion Styles for Weekly Diet Plan (NEW) --- */
+.accordion {
+    background-color: var(--white-color);
+    color: var(--dark-text);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: right;
+    outline: none;
+    font-size: 1.1em;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 700;
+    transition: background-color 0.4s ease;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.accordion:hover, .accordion.active {
+    background-color: #f1f1f1;
+}
+.accordion:after {
+    content: '\f078'; /* Font Awesome chevron-down icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--primary-blue);
+    transition: transform 0.4s ease;
+}
+.accordion.active:after {
+    transform: rotate(180deg); /* Flip icon when active */
+}
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 10px;
+}
+/* Updated styles for the panel to support multiple cards */
+.panel {
+    padding: 15px; /* Add padding to the panel itself */
+}
+
+.panel .card {
+    text-align: right; /* Ensure text starts from the right */
+    background-color: #f8f9fa; /* Slight background color for meal cards */
+}
+
+.panel .card h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.panel .card:first-child {
+    border-top: none;
+}
+
+/* --- Responsive & Animation --- */
+@media (max-width: 768px) {
+    .top-nav { padding: 0 15px; }
+    .top-nav .menu { display: none; position: absolute; top: var(--nav-height); left: 0; right: 0; background-color: var(--primary-blue); flex-direction: column; width: 100%; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .top-nav .menu.active { display: flex; }
+    .top-nav .menu a { width: 100%; padding: 15px; text-align: center; border-bottom: 1px solid var(--secondary-blue); margin: 0; border-radius: 0; }
+    .menu-toggle { display: block; }
+    .content { padding: 20px; }
+    .plan-header { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .exercise-card { flex-direction: column; align-items: flex-start; }
+    .exercise-details { flex-direction: column; gap: 10px; align-items: flex-start; }
+}
+@keyframes page-load-animation {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

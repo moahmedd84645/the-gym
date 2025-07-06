@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>برنامجك التدريبي</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="logo"><i class="fa-solid fa-heart-pulse"></i><h2>التحول الصحي</h2></div>
+        <div class="menu">
+            <a href="index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+            <a href="tamarin.html" class="active"><i class="fa-solid fa-dumbbell"></i> جدول التمارين</a>
+            <a href="wegabat.html"><i class="fa-solid fa-utensils"></i> النظام الغذائي</a>
+            <a href="nasa2e7.html"><i class="fa-solid fa-lightbulb"></i> نصائح يومية</a>
+            <a href="muscles-guide.html"><i class="fa-solid fa-person-running"></i> دليل العضلات</a>
+        </div>
+        <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+    <main class="content">
+        <header><h1><i class="fa-solid fa-clipboard-list"></i> برنامجك التدريبي المتكامل</h1></header>
+        <section id="program-selection-container" class="calculator-container">
+            <h2 style="text-align: center;">ابدأ بتصميم برنامجك</h2>
+            <form id="program-form">
+                <div class="form-group">
+                    <label for="goal">ما هو هدفك الأساسي؟</label>
+                    <select id="goal"><option value="loss">خسارة دهون</option><option value="gain">بناء عضلات</option></select>
+                </div>
+                <div class="form-group">
+                    <label for="level">ما هو مستواك الحالي؟</label>
+                    <select id="level"><option value="beginner">مبتدئ</option><option value="intermediate">متوسط</option></select>
+                </div>
+                <div class="form-group">
+                    <label for="duration">مدة البرنامج (بالأسابيع)</label>
+                    <select id="duration">
+                        <option value="4">4 أسابيع (شهر)</option>
+                        <option value="8" selected>8 أسابيع (شهرين)</option>
+                        <option value="12">12 أسبوع (3 شهور)</option>
+                    </select>
+                </div>
+                <button type="submit">أنشئ برنامجي</button>
+            </form>
+        </section>
+        <section id="workout-program-display" style="display: none;">
+             <div class="plan-header">
+                <h2>برنامجك التدريبي</h2>
+                <button id="change-program-btn">تغيير البرنامج</button>
+            </div>
+            <div class="week-navigation">
+                <button id="prev-week-btn"><i class="fa-solid fa-arrow-right"></i> الأسبوع السابق</button>
+                <span id="week-indicator"></span>
+                <button id="next-week-btn">الأسبوع التالي <i class="fa-solid fa-arrow-left"></i></button>
+            </div>
+            <div id="workout-program-content" class="exercise-plan"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل العضلات</title>
+    <style>
+        /* --- Font Import --- */
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap');
+
+        /* --- General Styles --- */
+        :root {
+            --primary-blue: #004a7c;
+            --secondary-blue: #005691;
+            --light-blue-bg: #e9f5ff;
+            --accent-blue: #007bff;
+            --youtube-red: #FF0000;
+            --light-grey-bg: #f4f7f6;
+            --white-color: #ffffff;
+            --dark-text: #333;
+            --nav-height: 70px;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-size: 17px;
+            margin: 0;
+            direction: rtl;
+            background-color: var(--light-grey-bg);
+            color: var(--dark-text);
+        }
+
+        /* --- Top Navigation Bar Styles --- */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--primary-blue);
+            color: var(--white-color);
+            padding: 0 30px;
+            height: var(--nav-height);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .top-nav .logo { display: flex; align-items: center; gap: 10px; }
+        .top-nav .logo h2 { margin: 0; font-size: 1.2em; }
+        .top-nav .menu a { color: var(--white-color); text-decoration: none; padding: 10px 15px; margin: 0 5px; border-radius: 8px; transition: background-color 0.3s; display: inline-flex; align-items: center; gap: 8px; }
+        .top-nav .menu a:hover, .top-nav .menu a.active { background-color: var(--secondary-blue); }
+        .menu-toggle { display: none; background: none; border: none; color: var(--white-color); font-size: 1.8em; cursor: pointer; }
+
+        /* --- Main Content Styles --- */
+        .content {
+            padding: 30px;
+            margin-top: var(--nav-height);
+            width: 100%;
+            box-sizing: border-box;
+            animation: page-load-animation 0.5s ease-out forwards;
+        }
+        header { border-bottom: 2px solid #e0e0e0; padding-bottom: 15px; margin-bottom: 30px; }
+        header h1 { color: var(--primary-blue); margin: 0; }
+
+        /* --- General Card & Component Styles --- */
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background-color: var(--white-color); border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: center; }
+        .card h3 { color: var(--secondary-blue); margin-top: 0; font-weight: 700; }
+        .card p { line-height: 1.7; }
+        .muscle-guide-image {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* --- Responsive & Animation --- */
+        @media (max-width: 768px) {
+            .top-nav { padding: 0 15px; }
+            .top-nav .menu { display: none; position: absolute; top: var(--nav-height); left: 0; right: 0; background-color: var(--primary-blue); flex-direction: column; width: 100%; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+            .top-nav .menu.active { display: flex; }
+            .top-nav .menu a { width: 100%; padding: 15px; text-align: center; border-bottom: 1px solid var(--secondary-blue); margin: 0; border-radius: 0; }
+            .menu-toggle { display: block; }
+            .content { padding: 20px; }
+        }
+        @keyframes page-load-animation {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <nav class="top-nav">
+        <div class="logo"><i class="fa-solid fa-heart-pulse"></i><h2>التحول الصحي</h2></div>
+        <div class="menu">
+            <a href="index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+            <a href="tamarin.html"><i class="fa-solid fa-dumbbell"></i> جدول التمارين</a>
+            <a href="wegabat.html"><i class="fa-solid fa-utensils"></i> النظام الغذائي</a>
+            <a href="muscles.html" class="active"><i class="fa-solid fa-person-burst"></i> دليل العضلات</a>
+            <a href="nasa2e7.html"><i class="fa-solid fa-lightbulb"></i> نصائح يومية</a>
+        </div>
+        <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+
+    <main class="content">
+        <header>
+            <h1><i class="fa-solid fa-person-burst"></i> دليلك الشامل لعضلات الجسم</h1>
+        </header>
+        <section class="cards">
+
+            <div class="card">
+                <img src="gym.png" alt="عضلات الصدر" class="muscle-guide-image">
+                <h3>عضلات الصدر (Pectorals)</h3>
+                <p>هي العضلات المسؤولة عن حركات الدفع الأفقي، مثل دفع البار أو تجميع الدمبلات. تقويتها تعطي مظهرًا ممتلئًا وقويًا للجزء العلوي من الجسم.</p>
+            </div>
+
+            <div class="card">
+                <img src="back.png" alt="عضلات الظهر" class="muscle-guide-image">
+                <h3>عضلات الظهر (Lats & Traps)</h3>
+                <p>مجموعة عضلات كبيرة مسؤولة عن حركات السحب، مثل العقلة والتجديف. هي أساس قوة الجزء العلوي وتساعد في تحسين وضعية الجسم ومنع الإصابات.</p>
+            </div>
+
+            <div class="card">
+                <img src="shoulder.png" alt="عضلات الأكتاف" class="muscle-guide-image">
+                <h3>عضلات الأكتاف (Deltoids)</h3>
+                <p>تتكون من ثلاثة رؤوس (أمامي، جانبي، خلفي) وهي المسؤولة عن رفع الذراعين في كل الاتجاهات. أكتاف قوية تعطي الجسم عرضًا وجاذبية.</p>
+            </div>
+
+            <div class="card">
+                <img src="front.png" alt="عضلات الأرجل" class="muscle-guide-image">
+                <h3>عضلات الأرجل (Quads, Hamstrings, Glutes)</h3>
+                <p>هي أساس الجسم وقوته. تشمل العضلات الرباعية الأمامية، والخلفية، والأرداف. تمارين مثل السكوات تقوي الجسم بأكمله وليس الأرجل فقط.</p>
+            </div>
+            
+            <div class="card">
+                <img src="biceps.png" alt="عضلة البايسبس" class="muscle-guide-image">
+                <h3>عضلة البايسبس (Biceps)</h3>
+                <p>العضلة الأمامية للذراع، وهي المسؤولة عن ثني الكوع (حركات السحب نحوك). تعتبر من العضلات التي يهتم بها الكثيرون لمظهرها الجذاب.</p>
+            </div>
+
+            <div class="card">
+                <img src="back (1).png" alt="عضلة الترايسبس" class="muscle-guide-image">
+                <h3>عضلة الترايسبس (Triceps)</h3>
+                <p>العضلة الخلفية للذراع، وهي أكبر من البايسبس وتشكل معظم حجم الذراع. مسؤولة عن فرد الكوع (حركات الدفع بعيدًا عنك).</p>
+            </div>
+
+            <div class="card">
+                <img src="human.png" alt="عضلات البطن" class="muscle-guide-image">
+                <h3>عضلات البطن (Abs)</h3>
+                <p>هي عضلات الجذع الأساسية، ومسؤولة عن ثبات الجسم وحمايته. تقويتها لا تقتصر على الشكل الجمالي فقط، بل هي ضرورية لأداء معظم التمارين بأمان.</p>
+            </div>
+            <div class="card">
+                <img src="muscles (1).png" alt="عضلة الترايسبس" class="muscle-guide-image">
+                <h3>عضلة الترايسبس (Triceps)</h3>
+                <p>تقع في الجزء الخلفي من الذراع العلوية، وهي مسؤولة عن فرد الكوع. تقويتها ضرورية لزيادة قوة الذراع وتحسين أداء تمارين الدفع مثل تمرين الضغط والبار.</p>
+            </div>
+
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
